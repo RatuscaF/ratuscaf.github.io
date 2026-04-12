@@ -17,8 +17,10 @@ export default {
          args: ['assets/space.png']
         },
     },
-    'dancingBearsFrames': {
-        // This is a special loader for the dancing bears animation frames
-        // Will be handled in Preloader.js
+    'audio': {
+        snap: {
+            key:'snap',
+            args: ['assets/fingersnap.mp3']
+        }
     }
 };

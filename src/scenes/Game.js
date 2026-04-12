@@ -425,7 +425,8 @@ export class Game extends Phaser.Scene {
             this.lastPosition = { x: this.dancingNote.x, y: this.dancingNote.y };
             this.lastNoteTime = this.songTime;
             this.notes.splice(index, 1);
-            this.flashButton(name, 0x00ff00); 
+            this.flashButton(name, 0x00ff00);
+            this.sound.play('snap', { volume: 0.8 });
             this.score += 1;
             this.hits++;
             console.log(`HIT! diff: ${diff.toFixed(3)}s`);
