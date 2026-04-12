@@ -22,6 +22,14 @@ export class SongSelect extends Phaser.Scene {
             fontSize: '36px',
             fill: '#ffffff',
         }).setOrigin(0.5);
+        const instructions = this.add.text(width / 2, title.y + 50,
+             'Two player game, click the buttons based on the rhythm. Player 1 clicks the buttons from the left side of the screen; Player 2 from the right side',
+              {
+            fontSize: '16px',
+            fill: '#ffffff',
+            wordWrap: { width: width - 40 },
+            align: 'center'
+        }).setOrigin(0.5);
 
         // Grid Configuration
         const columns = 3;
@@ -30,7 +38,7 @@ export class SongSelect extends Phaser.Scene {
         const spacing = 20; // Gap between buttons
         const gridWidth = (columns * buttonWidth) + ((columns - 1) * spacing);  
         const startX = (width - gridWidth) / 2 + (buttonWidth / 2);
-        const startY = title.y + 100; // Start 100px below the title
+        const startY = instructions.y + 120; // Start 100px below the title
 
         if (Array.isArray(data)) {
             data.forEach((song, index) => {
@@ -58,7 +66,7 @@ export class SongSelect extends Phaser.Scene {
         const container = this.add.container(x, y);
 
         // Background
-        const bg = this.add.rectangle(0, 0, w, h, 0x00f000, 0.5)
+        const bg = this.add.rectangle(0, 0, w, h, 0xe3c240, 0.5)
             .setInteractive({ useHandCursor: true });
 
         // Text

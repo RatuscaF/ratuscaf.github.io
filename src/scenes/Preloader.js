@@ -49,6 +49,12 @@ export class Preloader extends Phaser.Scene {
                 this.load[type].apply(this.load, args);
             }
         }
+
+        // Load dancing bears animation frames (150 frames)
+        for (let i = 1; i <= 150; i++) {
+            const frameNum = i.toString().padStart(3, '0');
+            this.load.image(`dancing_bears_${frameNum}`, `assets/frames/frame_${frameNum}.png`);
+        }
     }
 
     create() {

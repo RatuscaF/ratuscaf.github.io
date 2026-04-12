@@ -14,6 +14,29 @@ export class Game extends Phaser.Scene {
     }
 
     create() {
+        const {width, height} = this.scale;
+        this.add.image(width/2, height/2, 'background');
+
+        // Create dancing bears animation
+        const frames = [];
+        for (let i = 1; i <= 150; i++) {
+            const frameNum = i.toString().padStart(3, '0');
+            frames.push({ key: `dancing_bears_${frameNum}` });
+        }
+
+        // Create the animation
+        this.anims.create({
+            key: 'dancing',
+            frames: frames,
+            frameRate: 30,  // Adjust to match original GIF speed
+            repeat: -1      // Loop infinitely
+        });
+
+        // Create and play the sprite
+        this.dancingBearsSprite = this.add.sprite(width/2, height/2 +100, `dancing_bears_001`);
+        this.dancingBearsSprite.setScale(1.5);  // Adjust the number to change size (1 = original, 2 = 2x larger, etc.)
+        this.dancingBearsSprite.play('dancing');
+
         this.createButtons();
         this.createDancingNote();
         this.currentTargetNote = null;
@@ -376,13 +399,13 @@ export class Game extends Phaser.Scene {
 
             const y = startY + button.row * spacingY;
 
-            const btn = this.add.image(x, y, 'apple')
+            const btn = this.add.image(x, y, 'circle')
                 .setScale(2)
                 .setInteractive()
                 .setName(button.name);
             btn.on('pointerdown',  () => this.onButtonPressed(button.name));
             this.buttons[button.name] = btn;
-            this.input.enableDebug(btn);
+            //this.input.enableDebug(btn);
         }
     }
 
