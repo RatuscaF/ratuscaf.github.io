@@ -1,0 +1,319 @@
+{
+  "name": "Sabrina Carpenter - Espresso_audio",
+  "bpm": 120,
+  "offset": 0,
+  "notes": [
+    {
+      "time": 0.888,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 2.099,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 3.008,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 4.088,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 5.168,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 6.16,
+      "lane": "lane_R3"
+    },
+    {
+      "time": 7.859,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 8.96,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 10.008,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 10.688,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 11.648,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 12.389,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 13.819,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 14.808,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 15.8,
+      "lane": "lane_R3"
+    },
+    {
+      "time": 17.389,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 18.4,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 19.629,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 20.629,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 21.608,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 23.04,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 24.328,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 25.488,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 26.96,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 28.208,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 29.419,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 30.949,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 31.648,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 32.789,
+      "lane": "lane_R3"
+    },
+    {
+      "time": 33.579,
+      "lane": "lane_R3"
+    },
+    {
+      "time": 34.549,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 35.539,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 36.568,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 37.699,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 38.72,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 39.76,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 40.4,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 41.568,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 43.069,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 43.989,
+      "lane": "lane_R3"
+    },
+    {
+      "time": 45.128,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 46.269,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 47.448,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 48.52,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 49.8,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 50.909,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 51.96,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 52.779,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 54.709,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 56.379,
+      "lane": "lane_R3"
+    },
+    {
+      "time": 58.2,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 59.968,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 60.648,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 61.709,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 62.6,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 63.859,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 65.309,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 66.619,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 67.899,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 68.549,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 68.979,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 70.779,
+      "lane": "lane_R3"
+    },
+    {
+      "time": 71.939,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 72.768,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 73.429,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 74.568,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 75.488,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 76.109,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 76.829,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 77.739,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 79.08,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 80.368,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 81.509,
+      "lane": "lane_R3"
+    },
+    {
+      "time": 82.768,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 83.768,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 85.048,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 86.389,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 87.699,
+      "lane": "lane_R2"
+    }
+  ]
+}

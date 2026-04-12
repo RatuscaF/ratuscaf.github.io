@@ -33,7 +33,7 @@ export class Game extends Phaser.Scene {
         this.offset = this.song?.offset ?? 0;
         this.notes = chart.notes.map(note => ({
             ...note,
-            startTime: note.time - 0.65, 
+            startTime: note.time - 0.6, 
             active: true
         }));
         this.songTime = 0;
@@ -283,7 +283,7 @@ export class Game extends Phaser.Scene {
                 // This creates a parabola shape (y = x^2) for the jump
                 const jumpProgress = (moveProgress - begin) / (end - begin);
                 // Use a sine wave for the arc height
-                yOffset = Math.sin(jumpProgress * Math.PI) * -200; // Increased to -200 for a better "pop"
+                yOffset = Math.sin(jumpProgress * Math.PI) * -100; // Increased to -200 for a better "pop"
                 
                 // Add a slight "wobble" to the x-axis based on the side it's jumping to
                 const direction = targetBtn.x > this.lastPosition.x ? 1 : -1;

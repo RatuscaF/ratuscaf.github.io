@@ -18,5 +18,10 @@
         "name": "Smiley - Indragostit",
         "audio": "assets/songs/Smiley-Indragostit_audio.mp3",
         "chart": "assets/songs/Smiley-Indragostit_chart.json"
+    },
+    {
+        "name": "Sabrina Carpenter - Espresso",
+        "audio": "assets/songs/Sabrina Carpenter - Espresso_audio.mp3",
+        "chart": "assets/songs/Sabrina Carpenter - Espresso_chart.json"
     }
 ]
