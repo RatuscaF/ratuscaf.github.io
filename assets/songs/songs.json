@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Queen - Sunday Afternoon",
+        "audio": "assets/songs/Queen-SundayAfternoon_audio.mp3",
+        "chart": "assets/songs/Queen-SundayAfternoon_chart.json"
+    },
+    {
+        "name": "Happy Birthday",
+        "audio": "assets/songs/HappyBirthday_audio.mp3",
+        "chart": "assets/songs/HappyBirthday_chart.json"
+    },
+    {
+        "name": "Ditonellapiaga - Bibidi",
+        "audio": "assets/songs/Ditonellapiaga - Bibidi Bobidi Bu_audio.m4a",
+        "chart": "assets/songs/Ditonellapiaga - Bibidi Bobidi Bu_chart.json"
+    },
+    {
+        "name": "Smiley - Indragostit",
+        "audio": "assets/songs/Smiley-Indragostit_audio.mp3",
+        "chart": "assets/songs/Smiley-Indragostit_chart.json"
+    }
+]
