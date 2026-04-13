@@ -28,5 +28,10 @@
         "name": "Nirvana - Aero Zeppelin",
         "audio": "assets/songs/Nirvana - Aero Zeppelin_audio.mp3",
         "chart": "assets/songs/Nirvana - Aero Zeppelin_chart.json"
+    },
+    {
+        "name": "Fara Zahar - Smile",
+        "audio": "assets/songs/Fără Zahăr - Smile_audio.mp3",
+        "chart": "assets/songs/Fără Zahăr - Smile_chart.json"
     }
 ]
