@@ -33,5 +33,10 @@
         "name": "Fara Zahar - Smile",
         "audio": "assets/songs/Fără Zahăr - Smile_audio.mp3",
         "chart": "assets/songs/Fără Zahăr - Smile_chart.json"
+    },
+    {
+        "name": "Sia - Unstoppable",
+        "audio": "assets/songs/Sia - Unstoppable_audio.mp3",
+        "chart": "assets/songs/Sia - Unstoppable_chart.json"
     }
 ]

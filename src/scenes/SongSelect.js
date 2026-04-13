@@ -39,141 +39,142 @@ export class SongSelect extends Phaser.Scene {
         const spacing = 20; // Gap between buttons
         const gridWidth = (columns * buttonWidth) + ((columns - 1) * spacing);  
         const startX = (width - gridWidth) / 2 + (buttonWidth / 2);
-        const startY = instructions.y + 120; // Start below instructions
+        const startY = instructions.y + 65; // Start below instructions
         
-        // Scrolling setup
-        const viewportHeight = 350; // Height of visible song area (reduced to avoid overlaps)
-        const viewportWidth = width;
-        const buttonTopPadding = 80; // Padding at top to fully show first row (accounts for button origin)
+        // Pagination setup
+        const songsPerPage = 6; // 2 rows of 3 columns
         const songCount = Array.isArray(data) ? data.length : 0;
-        const totalRows = Math.ceil(songCount / columns);
-        const gridHeight = buttonTopPadding + ((totalRows * (buttonHeight + spacing)) - spacing); // Total grid height with padding
-        this.scrollOffset = 0;
-        this.maxScrollOffset = Math.max(0, gridHeight - viewportHeight);
+        const totalPages = Math.ceil(songCount / songsPerPage);
+        this.currentPage = 0;
+        this.totalPages = totalPages;
+        this.data = data;
+        this.columns = columns;
+        this.startX = startX;
+        this.startY = startY;
+        this.buttonWidth = buttonWidth;
+        this.buttonHeight = buttonHeight;
+        this.spacing = spacing;
+        this.songsPerPage = songsPerPage;
         
-        // Create container to hold all song boxes
+        // Create container to hold current page song boxes
         const songContainer = this.add.container(0, startY);
         this.songContainer = songContainer;
-        this.startY = startY;
-        this.viewportHeight = viewportHeight;
-        this.buttonTopPadding = buttonTopPadding;
         
-        // Create viewport mask to clip content
-        const maskGraphics = this.make.graphics({ x: 0, y: startY, add: false });
-        maskGraphics.fillStyle(0xffffff);
-        maskGraphics.fillRect(0, 0, viewportWidth, viewportHeight);
-        const mask = maskGraphics.createGeometryMask();
-        songContainer.setMask(mask);
+        // Function to render songs for current page
+        const renderPage = () => {
+            // Clear existing children
+            songContainer.removeAll(true);
+            
+            const pageStartIndex = this.currentPage * this.songsPerPage;
+            const pageEndIndex = Math.min(pageStartIndex + this.songsPerPage, this.data.length);
+            const pageSongs = this.data.slice(pageStartIndex, pageEndIndex);
+            
+            if (Array.isArray(pageSongs)) {
+                pageSongs.forEach((song, index) => {
+                    const col = index % this.columns;
+                    const row = Math.floor(index / this.columns);
 
-        if (Array.isArray(data)) {
-            data.forEach((song, index) => {
-                const col = index % columns;
-                const row = Math.floor(index / columns);
-
-                const xPos = startX + (col * (buttonWidth + spacing));
-                const yPos = buttonTopPadding + (row * (buttonHeight + spacing));
-                this.createSongBox(xPos, yPos, song, buttonWidth, buttonHeight, songContainer);
-            });
-        }
-        
-        // Add scroll input handlers
-        this.input.on('pointerwheel', (pointer, over, deltaX, deltaY) => {
-            const scrollAmount = 40;
-            this.scrollOffset -= deltaY > 0 ? scrollAmount : -scrollAmount;
-            this.scrollOffset = Phaser.Math.Clamp(this.scrollOffset, 0, this.maxScrollOffset);
-            songContainer.setY(this.startY - this.scrollOffset);
-            // Update scrollbar after scroll happens
-            if (this.updateScrollbar) this.updateScrollbar();
-        });
-        
-        // Keyboard scroll (Arrow Up/Down and W/S)
-        this.input.keyboard.on('keydown', (event) => {
-            const scrollAmount = 40;
-            if (event.key === 'ArrowUp' || event.key === 'w' || event.key === 'W') {
-                this.scrollOffset -= scrollAmount;
-            } else if (event.key === 'ArrowDown' || event.key === 's' || event.key === 'S') {
-                this.scrollOffset += scrollAmount;
+                    const xPos = this.startX + (col * (this.buttonWidth + this.spacing));
+                    const yPos = 80 + (row * (this.buttonHeight + this.spacing));
+                    this.createSongBox(xPos, yPos, song, this.buttonWidth, this.buttonHeight, songContainer);
+                });
             }
-            this.scrollOffset = Phaser.Math.Clamp(this.scrollOffset, 0, this.maxScrollOffset);
-            songContainer.setY(this.startY - this.scrollOffset);
-            // Update scrollbar after scroll happens
-            if (this.updateScrollbar) this.updateScrollbar();
-        });
-        
-        // Scrollbar setup
-        const scrollbarWidth = 20;
-        const scrollbarX = width - scrollbarWidth / 2;
-        const scrollbarTrackY = this.startY + this.viewportHeight / 2;
-        const scrollbarHeight = this.viewportHeight;
-        
-        // Create scrollbar track (background)
-        const scrollbarTrack = this.add.rectangle(scrollbarX, scrollbarTrackY, scrollbarWidth - 4, scrollbarHeight, 0x333333, 0.3);
-        scrollbarTrack.setOrigin(0.5);
-        
-        // Create scrollbar thumb (draggable handle)
-        const thumbHeight = Math.max(20, (this.viewportHeight / (this.gridHeight || this.viewportHeight)) * scrollbarHeight);
-        const scrollbarThumb = this.add.rectangle(scrollbarX, scrollbarTrackY, scrollbarWidth - 6, thumbHeight, 0xccaa00, 0.8);
-        scrollbarThumb.setOrigin(0.5).setInteractive({ useHandCursor: true });
-        
-        this.scrollbarThumb = scrollbarThumb;
-        this.scrollbarTrackY = scrollbarTrackY;
-        this.scrollbarHeight = scrollbarHeight;
-        this.scrollbarWidth = scrollbarWidth;
-        this.scrollbarX = scrollbarX;
-        
-        // Update scrollbar position function
-        const updateScrollbar = () => {
-            const thumbY = scrollbarTrackY - (scrollbarHeight / 2) + ((this.scrollOffset / this.maxScrollOffset) * (scrollbarHeight - thumbHeight));
-            scrollbarThumb.setY(thumbY);
         };
-        updateScrollbar();
         
-        // Store reference for use in other handlers
-        this.updateScrollbar = updateScrollbar;
-        this.gridHeight = gridHeight;
-        let dragStartY = 0;
-        let dragStartOffset = 0;
-        let isDraggingScrollbar = false;
+        this.renderPage = renderPage;
+        renderPage(); // Render first page
         
-        this.input.on('pointerdown', (pointer) => {
-            // Check if dragging scrollbar
-            if (this.maxScrollOffset > 0 && Math.abs(pointer.x - scrollbarX) < scrollbarWidth && 
-                pointer.y >= scrollbarTrackY - scrollbarHeight / 2 && pointer.y <= scrollbarTrackY + scrollbarHeight / 2) {
-                isDraggingScrollbar = true;
-                dragStartY = pointer.y;
-                dragStartOffset = this.scrollOffset;
-                return;
-            }
-            
-            // Only drag scroll if pointer is over the viewport area and not over scrollbar
-            if (pointer.y >= this.startY && pointer.y <= this.startY + this.viewportHeight
-                && pointer.x < scrollbarX - scrollbarWidth / 2) {
-                dragStartY = pointer.y;
-                dragStartOffset = this.scrollOffset;
+        // Pagination buttons
+        const buttonPadding = 12;
+        const pageButtonWidth = 120;
+        const pageButtonHeight = 40;
+        const pageButtonY = height - 100; // Above the editor button
+        
+        // Previous button
+        const prevBtn = this.add.text(width / 2 - pageButtonWidth - 20, pageButtonY, '← PREV', {
+            fontSize: '16px',
+            fill: '#000000',
+            backgroundColor: '#ff9900',
+            padding: { x: buttonPadding, y: buttonPadding }
+        }).setOrigin(0.5).setInteractive({ useHandCursor: true });
+        
+        prevBtn.on('pointerdown', () => {
+            if (this.currentPage > 0) {
+                this.currentPage--;
+                this.renderPage();
+                this.updatePageButtons();
             }
         });
         
-        this.input.on('pointermove', (pointer) => {
-            if (!pointer.isDown) return;
-            
-            if (isDraggingScrollbar && this.maxScrollOffset > 0) {
-                const dragDelta = pointer.y - dragStartY;
-                const scrollbarRange = this.scrollbarHeight - thumbHeight;
-                this.scrollOffset = (dragDelta / scrollbarRange) * this.maxScrollOffset + dragStartOffset;
-                this.scrollOffset = Phaser.Math.Clamp(this.scrollOffset, 0, this.maxScrollOffset);
-            } else if (dragStartY > 0) {
-                const dragDelta = dragStartY - pointer.y;
-                this.scrollOffset = dragStartOffset + dragDelta;
-                this.scrollOffset = Phaser.Math.Clamp(this.scrollOffset, 0, this.maxScrollOffset);
+        this.prevBtn = prevBtn;
+        
+        // Next button
+        const nextBtn = this.add.text(width / 2 + pageButtonWidth + 20, pageButtonY, 'NEXT →', {
+            fontSize: '16px',
+            fill: '#000000',
+            backgroundColor: '#ff9900',
+            padding: { x: buttonPadding, y: buttonPadding }
+        }).setOrigin(0.5).setInteractive({ useHandCursor: true });
+        
+        nextBtn.on('pointerdown', () => {
+            if (this.currentPage < this.totalPages - 1) {
+                this.currentPage++;
+                this.renderPage();
+                this.updatePageButtons();
             }
-            
-            songContainer.setY(this.startY - this.scrollOffset);
-            updateScrollbar();
         });
         
-        this.input.on('pointerup', () => {
-            dragStartY = 0;
-            isDraggingScrollbar = false;
+        this.nextBtn = nextBtn;
+        
+        // Page counter
+        const pageCounterText = this.add.text(width / 2, pageButtonY, '', {
+            fontSize: '18px',
+            fill: '#ffffff',
+            align: 'center'
+        }).setOrigin(0.5);
+        
+        this.pageCounterText = pageCounterText;
+        
+        // Function to update button states
+        const updatePageButtons = () => {
+            const pageText = `Page ${this.currentPage + 1} of ${this.totalPages}`;
+            pageCounterText.setText(pageText);
+            
+            // Disable prev button if on first page
+            if (this.currentPage === 0) {
+                prevBtn.setAlpha(0.4).setInteractive({ useHandCursor: false });
+            } else {
+                prevBtn.setAlpha(1).setInteractive({ useHandCursor: true });
+            }
+            
+            // Disable next button if on last page
+            if (this.currentPage === this.totalPages - 1) {
+                nextBtn.setAlpha(0.4).setInteractive({ useHandCursor: false });
+            } else {
+                nextBtn.setAlpha(1).setInteractive({ useHandCursor: true });
+            }
+        };
+        
+        this.updatePageButtons = updatePageButtons;
+        updatePageButtons(); // Initialize button states
+        
+        // Keyboard pagination support
+        this.input.keyboard.on('keydown', (event) => {
+            if (event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A') {
+                // Previous page
+                if (this.currentPage > 0) {
+                    this.currentPage--;
+                    this.renderPage();
+                    this.updatePageButtons();
+                }
+            } else if (event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D') {
+                // Next page
+                if (this.currentPage < this.totalPages - 1) {
+                    this.currentPage++;
+                    this.renderPage();
+                    this.updatePageButtons();
+                }
+            }
         });
 
         const editorBtn = this.add.text(width / 2, height - 40, '🎼 CHART EDITOR', {
