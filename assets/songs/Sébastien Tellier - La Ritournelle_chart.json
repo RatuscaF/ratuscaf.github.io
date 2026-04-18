@@ -1,0 +1,611 @@
+{
+  "name": "Sébastien Tellier - La Ritournelle -cut",
+  "bpm": 120,
+  "offset": 0,
+  "notes": [
+    {
+      "time": 0.661,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 1.045,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 1.536,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 1.984,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 2.368,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 2.965,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 3.307,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 3.669,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 4.096,
+      "lane": "lane_R3"
+    },
+    {
+      "time": 4.523,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 6.869,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 9.131,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 11.627,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 13.568,
+      "lane": "lane_R3"
+    },
+    {
+      "time": 15.979,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 18.091,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 20.629,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 22.976,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 24.064,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 24.917,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 25.365,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 26.432,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 26.795,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 27.136,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 28.011,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 28.843,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 30.016,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 30.933,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 34.624,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 35.541,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 36.715,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 37.653,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 39.531,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 40.235,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 41.493,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 42.347,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 43.648,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 45.547,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 46.357,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 47.573,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 48.192,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 49.365,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 50.091,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 51.243,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 51.819,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 53.333,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 54.101,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 55.403,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 58.347,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 58.923,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 59.221,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 59.605,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 59.968,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 60.288,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 61.099,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 61.483,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 61.824,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 62.165,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 62.507,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 62.955,
+      "lane": "lane_R3"
+    },
+    {
+      "time": 63.509,
+      "lane": "lane_R3"
+    },
+    {
+      "time": 63.936,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 64.277,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 64.619,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 64.939,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 65.216,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 65.899,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 66.283,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 66.688,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 67.093,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 67.563,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 67.755,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 68.331,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 68.736,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 69.227,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 69.632,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 70.037,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 70.677,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 71.104,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 71.488,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 71.872,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 72.661,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 73.067,
+      "lane": "lane_R3"
+    },
+    {
+      "time": 73.387,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 73.856,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 74.325,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 75.136,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 75.669,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 76.053,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 76.437,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 76.928,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 77.675,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 78.763,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 79.296,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 80.043,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 80.384,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 80.789,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 81.557,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 82.197,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 82.773,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 83.157,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 83.627,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 84.501,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 85.141,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 85.995,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 87.019,
+      "lane": "lane_R3"
+    },
+    {
+      "time": 87.424,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 87.787,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 88.128,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 88.469,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 88.939,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 89.835,
+      "lane": "lane_R3"
+    },
+    {
+      "time": 90.197,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 90.475,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 90.795,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 91.115,
+      "lane": "lane_R3"
+    },
+    {
+      "time": 91.456,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 91.84,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 92.459,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 92.736,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 93.035,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 94.848,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 95.403,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 95.744,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 96.149,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 96.576,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 97.067,
+      "lane": "lane_R3"
+    },
+    {
+      "time": 97.493,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 98.048,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 98.603,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 99.008,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 99.435,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 100.907,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 101.397,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 101.973,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 102.485,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 103.04,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 103.595,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 104.149,
+      "lane": "lane_L1"
+    },
+    {
+      "time": 104.555,
+      "lane": "lane_L2"
+    },
+    {
+      "time": 105.323,
+      "lane": "lane_L3"
+    },
+    {
+      "time": 106.475,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 106.965,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 107.584,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 108.053,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 108.437,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 108.843,
+      "lane": "lane_R3"
+    },
+    {
+      "time": 109.184,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 109.995,
+      "lane": "lane_R1"
+    },
+    {
+      "time": 110.4,
+      "lane": "lane_R2"
+    },
+    {
+      "time": 110.955,
+      "lane": "lane_R2"
+    }
+  ]
+}

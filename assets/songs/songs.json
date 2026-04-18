@@ -58,5 +58,10 @@
         "name": "Ditonellapiaga - Miss Italia",
         "audio": "assets/songs/Ditonellapiaga - Miss Italia_audio.mp3",
         "chart": "assets/songs/Ditonellapiaga - Miss Italia_chart.json"
+    },
+    {
+        "name": "Sébastien Tellier - La Ritournelle",
+        "audio": "assets/songs/Sébastien Tellier - La Ritournelle_audio.m4a",
+        "chart": "assets/songs/Sébastien Tellier - La Ritournelle_chart.json"
     }
 ]
